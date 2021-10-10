@@ -21,9 +21,9 @@ from todoapp.views import ProjectViewSet, TodoViewSet
 
 
 router = DefaultRouter()
-router.register('users', UserViewSet)
-router.register('projects', ProjectViewSet)
-router.register('todos', TodoViewSet)
+router.register('users', UserViewSet, basename='users')
+router.register('projects', ProjectViewSet, basename='projects')
+router.register('todos', TodoViewSet, basename='todos')
 
 
 urlpatterns = [
