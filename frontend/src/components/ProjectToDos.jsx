@@ -16,7 +16,7 @@ const ProjectToDoList = ({todos}) => {
     let { id } = useParams();
     let filtered_todos = todos.filter((todo) => todo.project.id == id);
 
-    if (filtered_todos.length == 0) {
+    if (filtered_todos.length === 0) {
         return (
         <div>Project doesnt has todos yet.</div>
         )
