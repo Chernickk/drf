@@ -1,12 +1,13 @@
 import React from 'react';
 
 const UserItem = ({user}) => {
+    const { username, first_name, last_name, email } = user
     return (
         <tr>
-            <td>{user.username}</td>
-            <td>{user.first_name}</td>
-            <td>{user.last_name}</td>
-            <td>{user.email}</td>
+            <td>{ username }</td>
+            <td>{ first_name }</td>
+            <td>{ last_name }</td>
+            <td>{ email }</td>
         </tr>
     );
 };
