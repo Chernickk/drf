@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import DjangoModelPermissions
 
 from .models import Project, ToDo
 from .serializers import ProjectSerializer, ToDoSerializer
@@ -7,6 +8,7 @@ from .paginators import ProjectPaginationClass, ToDoPaginationClass
 
 
 class ProjectViewSet(ModelViewSet):
+    permission_classes = [DjangoModelPermissions]
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
     pagination_class = ProjectPaginationClass
@@ -14,6 +16,7 @@ class ProjectViewSet(ModelViewSet):
 
 
 class TodoViewSet(ModelViewSet):
+    permission_classes = [DjangoModelPermissions]
     serializer_class = ToDoSerializer
     queryset = ToDo.objects.all()
     pagination_class = ToDoPaginationClass
