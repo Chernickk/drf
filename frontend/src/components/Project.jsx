@@ -5,11 +5,11 @@ const ProjectItem = ({project}) => {
     const { id, name, link, user } = project
     return (
         <tr>
-            <Link to={`project/${id}`}>
-                <td>{ name }</td>
-                <td>{ link }</td>
-                <td>{ user.map((us) => us.username) }</td>
-            </Link>
+            
+            <td><Link to={`project/${id}`}>{ name }</Link></td>
+            <td>{ link }</td>
+            <td>{ user.map((us) => us.username) }</td>
+            
         </tr>
     );
 };
