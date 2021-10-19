@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_yasg',
+    'graphene_django',
 
     'authapp',
     'todoapp',
@@ -152,4 +153,8 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
+}
+
+GRAPHENE = {
+    'SCHEMA': 'todo.schema.schema'
 }
