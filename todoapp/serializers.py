@@ -5,7 +5,7 @@ from authapp.serializers import UserSerializer
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    user = UserSerializer(many=True)
+    # user = UserSerializer(many=True)
 
     class Meta:
         model = Project
@@ -13,8 +13,8 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 
 class ToDoSerializer(serializers.ModelSerializer):
-    project = ProjectSerializer()
-    user = UserSerializer()
+    # project = ProjectSerializer()
+    # user = UserSerializer()
 
     class Meta:
         model = ToDo
